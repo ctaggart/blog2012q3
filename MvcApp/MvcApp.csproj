@@ -236,6 +236,6 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-  <Import Project="WebSharper.targets" />
+  <Import Project="$(MSBuildProjectDirectory)\WebSharper.targets" />
   <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.Web.targets" />
 </Project>
