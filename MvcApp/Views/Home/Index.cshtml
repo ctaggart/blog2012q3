@@ -2,4 +2,11 @@
     var title = ".NET Web App in the Clouds";
     ViewBag.Title = title;
 }
+@section head
+{
+    <script src="@Url.Content("~/Scripts/IntelliFactory.JavaScript.Runtime.js")"></script>
+    <script src="@Url.Content("~/Scripts/HolaMundo.dll.js")"></script>
+    <script>IntelliFactory.Runtime.Start();</script>
+}
 <h2>Hello World from a @title</h2>
+<p><a href="#" onclick="Hola.Mundo.AlertFactorial(7); return false;">Run Factorial(7)</a></p>

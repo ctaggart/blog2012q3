@@ -147,6 +147,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
+    <Content Include="Scripts\IntelliFactory.JavaScript.Runtime.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
       <DependentUpon>jquery-1.6.2.js</DependentUpon>
@@ -194,6 +195,12 @@
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HolaMundo\HolaMundo.fsproj">
+      <Project>{01f6b11d-5d05-4044-9095-14559f31df72}</Project>
+      <Name>HolaMundo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -229,4 +236,6 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
+  <Import Project="WebSharper.targets" />
+  <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.Web.targets" />
 </Project>

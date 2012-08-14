@@ -10,12 +10,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D176A3
 		.nuget\nuget.exe = .nuget\nuget.exe
 	EndProjectSection
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HolaMundo", "HolaMundo\HolaMundo.fsproj", "{01F6B11D-5D05-4044-9095-14559F31DF72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01F6B11D-5D05-4044-9095-14559F31DF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F6B11D-5D05-4044-9095-14559F31DF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F6B11D-5D05-4044-9095-14559F31DF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F6B11D-5D05-4044-9095-14559F31DF72}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87C5926D-0333-487D-B13F-4458796FDD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{87C5926D-0333-487D-B13F-4458796FDD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87C5926D-0333-487D-B13F-4458796FDD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
