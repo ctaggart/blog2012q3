@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="HolaMundo.fs" />
     <None Include="packages.config" />
+    <None Include="WebSharper.targets" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -58,6 +59,6 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <Import Project="$(MSBuildProjectDirectory)\WebSharper.targets" />
+  <Import Project="WebSharper.targets" />
   <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.targets" />
 </Project>
