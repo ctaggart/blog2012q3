@@ -147,7 +147,6 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
-    <Content Include="Scripts\HolaMundo.dll.js" />
     <Content Include="Scripts\IntelliFactory.JavaScript.Runtime.js" />
     <Content Include="Scripts\jquery-1.6.2.js" />
     <Content Include="Scripts\jquery-1.6.2.min.js">
@@ -186,7 +185,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="WebSharper.targets" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -238,28 +236,6 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-  <Import Project="WebSharper.targets" />
-  <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.Web.targets" Condition="Exists('$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.Web.targets')" />
-
-  <Target Name="DebugPublishDependsOn">
-    <Message Text="in DebugPublishDependsOn" />
-  </Target>
-  
-  <Target Name="DebugPublishBuildDependsOn">
-    <Message Text="in DebugPublishBuildDependsOn" />
-  </Target>
-
-  <Target Name="Debug_CopyWebApplicationDependsOn">
-    <Message Text="in Debug_CopyWebApplicationDependsOn" />
-  </Target>
-
-  <Target Name="DebugAfterBuild" AfterTargets="AfterBuild">
-    <Message Text="in DebugAfterBuild" />
-  </Target>
-
-  <PropertyGroup>
-    <PublishDependsOn>$(PublishDependsOn);DebugPublishDependsOn</PublishDependsOn>
-    <PublishBuildDependsOn>$(PublishBuildDependsOn);DebugPublishBuildDependsOn</PublishBuildDependsOn>
-    <_CopyWebApplicationDependsOn>$(_CopyWebApplicationDependsOn);Debug_CopyWebApplicationDependsOn</_CopyWebApplicationDependsOn>
-  </PropertyGroup>
+  <Import Project="$(SolutionDir)\WebSharper.targets" />
+  <Import Project="$(WebSharperHome)\IntelliFactory.WebSharper.Web.targets" Condition="Exists('$(WebSharperHome)')" />
 </Project>
