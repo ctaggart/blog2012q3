@@ -60,5 +60,5 @@
   </Target>
   -->
   <Import Project="WebSharper.targets" />
-  <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.targets" />
+  <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.targets" Condition="Exists('$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.targets')" />
 </Project>
