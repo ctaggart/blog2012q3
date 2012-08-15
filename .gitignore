@@ -5,5 +5,3 @@ obj/
 bin/
 PublishProfiles/
 /MvcApp/Scripts/build.tmp
-*.dll.js
-*.dll.min.js
