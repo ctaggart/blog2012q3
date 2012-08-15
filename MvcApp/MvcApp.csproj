@@ -240,4 +240,26 @@
   </Target> -->
   <Import Project="WebSharper.targets" />
   <Import Project="$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.Web.targets" Condition="Exists('$(WEBSHARPER_HOME)\IntelliFactory.WebSharper.Web.targets')" />
+
+  <Target Name="DebugPublishDependsOn">
+    <Message Text="in DebugPublishDependsOn" />
+  </Target>
+  
+  <Target Name="DebugPublishBuildDependsOn">
+    <Message Text="in DebugPublishBuildDependsOn" />
+  </Target>
+
+  <Target Name="Debug_CopyWebApplicationDependsOn">
+    <Message Text="in Debug_CopyWebApplicationDependsOn" />
+  </Target>
+
+  <Target Name="DebugAfterBuild" AfterTargets="AfterBuild">
+    <Message Text="in DebugAfterBuild" />
+  </Target>
+
+  <PropertyGroup>
+    <PublishDependsOn>$(PublishDependsOn);DebugPublishDependsOn</PublishDependsOn>
+    <PublishBuildDependsOn>$(PublishBuildDependsOn);DebugPublishBuildDependsOn</PublishBuildDependsOn>
+    <_CopyWebApplicationDependsOn>$(_CopyWebApplicationDependsOn);Debug_CopyWebApplicationDependsOn</_CopyWebApplicationDependsOn>
+  </PropertyGroup>
 </Project>
