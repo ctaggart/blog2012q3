@@ -6,3 +6,4 @@ PublishProfiles/
 /MvcApp/Scripts/build.tmp
 *.dll.js
 *.dll.min.js
+/VectorTP/TestVectorTP.exe
